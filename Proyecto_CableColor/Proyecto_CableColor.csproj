@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D52ED2B5-A15E-4085-9ADD-83D77A3DDB23}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Proyecto_CableColor</RootNamespace>
+    <AssemblyName>Proyecto_CableColor</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>C:\Users\EDWINLEONARDO\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>AB36F9996C273059BEEA05C15A18F03CAF4F2F77</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Proyecto_CableColor_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge.Video, Version=2.1.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.1.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="iTextSharp.LGPLv2.Core, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\iTextSharp.LGPLv2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.WinForms.12.0.2402.15\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases_System\System_Data.cs" />
+    <Compile Include="Controller\CargosController.cs" />
+    <Compile Include="Controller\ClientesController.cs" />
+    <Compile Include="Controller\DepartamentoPaisController.cs" />
+    <Compile Include="Controller\EmpleadosController.cs" />
+    <Compile Include="Controller\EstadoCivilController.cs" />
+    <Compile Include="Controller\Departamento_EmpController.cs" />
+    <Compile Include="Controller\GenerosController.cs" />
+    <Compile Include="Controller\MantenimientoController.cs" />
+    <Compile Include="Controller\MunicipioController.cs" />
+    <Compile Include="Controller\NacionalidadController.cs" />
+    <Compile Include="Controller\NivelAccesoController.cs" />
+    <Compile Include="Controller\OrdenesController.cs" />
+    <Compile Include="Controller\PaisController.cs" />
+    <Compile Include="Controller\PaquetesController.cs" />
+    <Compile Include="Controller\ProspectosController.cs" />
+    <Compile Include="Controller\SectorController.cs" />
+    <Compile Include="Controller\TipoPaquetesController.cs" />
+    <Compile Include="Controller\TipoSectorController.cs" />
+    <Compile Include="Controller\TurnosController.cs" />
+    <Compile Include="Controller\UsuariosController.cs" />
+    <Compile Include="Control_System\Conexion_Forma1.cs" />
+    <Compile Include="Control_System\Conexion_Forma2.cs" />
+    <Compile Include="Control_System\DataBase.cs" />
+    <Compile Include="Control_System\DataUser.cs" />
+    <Compile Include="Control_System\Helpers.cs" />
+    <Compile Include="Login\Frm_ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Frm_ChangePassword.Designer.cs">
+      <DependentUpon>Frm_ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Frm_Confirmacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Frm_Confirmacion.Designer.cs">
+      <DependentUpon>Frm_Confirmacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Frm_Login.Designer.cs">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CargosModel.cs" />
+    <Compile Include="Model\ClientesModel.cs" />
+    <Compile Include="Model\ClientesProspectosModel.cs" />
+    <Compile Include="Model\DepartamentoPaisModel.cs" />
+    <Compile Include="Model\Departamento_EmpModel.cs" />
+    <Compile Include="Model\EmpleadosModel.cs" />
+    <Compile Include="Model\EstadoCivilModel.cs" />
+    <Compile Include="Model\GenerosModel.cs" />
+    <Compile Include="Model\MantenimientoModel.cs" />
+    <Compile Include="Model\MunicipioModel.cs" />
+    <Compile Include="Model\NacionalidadModel.cs" />
+    <Compile Include="Model\NivelAccesoModel.cs" />
+    <Compile Include="Model\OrdenesModel.cs" />
+    <Compile Include="Model\PaisModel.cs" />
+    <Compile Include="Model\PaquetesModel.cs" />
+    <Compile Include="Model\SectorModel.cs" />
+    <Compile Include="Model\TipoSectorModel.cs" />
+    <Compile Include="Model\TiposPaquetesModel.cs" />
+    <Compile Include="Model\TurnosModel.cs" />
+    <Compile Include="Model\UsuariosModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\Frm_Reporteria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Frm_Reporteria.Designer.cs">
+      <DependentUpon>Frm_Reporteria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_Cargos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_Cargos.Designer.cs">
+      <DependentUpon>Frm_Cargos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_Clientes.Designer.cs">
+      <DependentUpon>Frm_Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_DepartamentoPais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_DepartamentoPais.Designer.cs">
+      <DependentUpon>Frm_DepartamentoPais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_Departamento_Emp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_Departamento_Emp.Designer.cs">
+      <DependentUpon>Frm_Departamento_Emp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_Empleados.Designer.cs">
+      <DependentUpon>Frm_Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_EstadoCivil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_EstadoCivil.Designer.cs">
+      <DependentUpon>Frm_EstadoCivil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_Mantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_Mantenimiento.Designer.cs">
+      <DependentUpon>Frm_Mantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_Municipio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_Municipio.Designer.cs">
+      <DependentUpon>Frm_Municipio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_Ordenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_Ordenes.Designer.cs">
+      <DependentUpon>Frm_Ordenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_Pais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_Pais.Designer.cs">
+      <DependentUpon>Frm_Pais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_ProspectosClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_ProspectosClientes.Designer.cs">
+      <DependentUpon>Frm_ProspectosClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_Sector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_Sector.Designer.cs">
+      <DependentUpon>Frm_Sector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_TipoSector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_TipoSector.Designer.cs">
+      <DependentUpon>Frm_TipoSector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_Turnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_Turnos.Designer.cs">
+      <DependentUpon>Frm_Turnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_Adicionales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_Adicionales.Designer.cs">
+      <DependentUpon>Frm_Adicionales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_Correo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_Correo.Designer.cs">
+      <DependentUpon>Frm_Correo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_Generos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_Generos.Designer.cs">
+      <DependentUpon>Frm_Generos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_Nacionalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_Nacionalidad.Designer.cs">
+      <DependentUpon>Frm_Nacionalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_NivelAcceso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_NivelAcceso.Designer.cs">
+      <DependentUpon>Frm_NivelAcceso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_Panel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_Panel.Designer.cs">
+      <DependentUpon>Frm_Panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_Paquetes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_Paquetes.Designer.cs">
+      <DependentUpon>Frm_Paquetes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_TipoPaquetes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_TipoPaquetes.Designer.cs">
+      <DependentUpon>Frm_TipoPaquetes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Frm_Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_Usuarios.Designer.cs">
+      <DependentUpon>Frm_Usuarios.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Login\Frm_ChangePassword.resx">
+      <DependentUpon>Frm_ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Frm_Confirmacion.resx">
+      <DependentUpon>Frm_Confirmacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Frm_Login.resx">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reportes\Frm_Reporteria.resx">
+      <DependentUpon>Frm_Reporteria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Reporte_Mantenimiento.rdlc" />
+    <EmbeddedResource Include="Reportes\Reporte_Prospectos.rdlc" />
+    <EmbeddedResource Include="Reportes\Reporte_Clientes.rdlc" />
+    <EmbeddedResource Include="Reportes\Reporte_Empleados.rdlc" />
+    <EmbeddedResource Include="Reportes\Reporte_Ordenes.rdlc" />
+    <EmbeddedResource Include="Reportes\Reporte_Paquetes.rdlc" />
+    <EmbeddedResource Include="Reportes\Reporte_Usuarios.rdlc" />
+    <EmbeddedResource Include="View\Frm_Cargos.resx">
+      <DependentUpon>Frm_Cargos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_Clientes.resx">
+      <DependentUpon>Frm_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_DepartamentoPais.resx">
+      <DependentUpon>Frm_DepartamentoPais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_Departamento_Emp.resx">
+      <DependentUpon>Frm_Departamento_Emp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_Empleados.resx">
+      <DependentUpon>Frm_Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_EstadoCivil.resx">
+      <DependentUpon>Frm_EstadoCivil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_Mantenimiento.resx">
+      <DependentUpon>Frm_Mantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_Municipio.resx">
+      <DependentUpon>Frm_Municipio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_Ordenes.resx">
+      <DependentUpon>Frm_Ordenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_Pais.resx">
+      <DependentUpon>Frm_Pais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_ProspectosClientes.resx">
+      <DependentUpon>Frm_ProspectosClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_Sector.resx">
+      <DependentUpon>Frm_Sector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_TipoSector.resx">
+      <DependentUpon>Frm_TipoSector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_Turnos.resx">
+      <DependentUpon>Frm_Turnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_Adicionales.resx">
+      <DependentUpon>Frm_Adicionales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_Correo.resx">
+      <DependentUpon>Frm_Correo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_Generos.resx">
+      <DependentUpon>Frm_Generos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_Nacionalidad.resx">
+      <DependentUpon>Frm_Nacionalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_NivelAcceso.resx">
+      <DependentUpon>Frm_NivelAcceso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_Panel.resx">
+      <DependentUpon>Frm_Panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_Paquetes.resx">
+      <DependentUpon>Frm_Paquetes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_TipoPaquetes.resx">
+      <DependentUpon>Frm_TipoPaquetes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_Usuarios.resx">
+      <DependentUpon>Frm_Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Proyecto_CableColor.Model.ClientesModel.datasource" />
+    <None Include="Properties\DataSources\Proyecto_CableColor.Model.ClientesProspectosModel.datasource" />
+    <None Include="Properties\DataSources\Proyecto_CableColor.Model.EmpleadosModel.datasource" />
+    <None Include="Properties\DataSources\Proyecto_CableColor.Model.MantenimientoModel.datasource" />
+    <None Include="Properties\DataSources\Proyecto_CableColor.Model.OrdenesModel.datasource" />
+    <None Include="Properties\DataSources\Proyecto_CableColor.Model.PaquetesModel.datasource" />
+    <None Include="Properties\DataSources\Proyecto_CableColor.Model.UsuariosModel.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Proyecto_CableColor_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
